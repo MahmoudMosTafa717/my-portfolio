@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>Software Engineer | Full-Stack Web Developer</h3>
-  <a href="https://abdelrhman-keshk.github.io/My-Portifolio/" target="_blank">🚀 View Live Demo</a>
+  <a href="https://mahmoud-mostafa.pages.dev/" target="_blank">🚀 View Live Demo</a>
 </div>
 
 ---
@@ -12,6 +12,7 @@
 This is my personal portfolio website, built to showcase my journey, skills, and projects as a Software Engineer and Full-Stack Web Developer. It features a modern, responsive design with smooth animations and a dynamic theme toggle.
 
 ### ✨ Features
+
 - **Responsive Design**: Fully optimized for mobile, tablet, and desktop views.
 - **Dark/Light Mode**: Smooth theme toggling support.
 - **Interactive Animations**: Powered by Framer Motion for a premium feel.
@@ -42,18 +43,25 @@ Make sure you have Node.js installed on your machine.
 ### Installation
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/MahmoudMosTafa717/My-Portifolio.git
    ```
+
 2. Install NPM packages
+
    ```sh
    npm install
    ```
+
 3. Create a `.env` file in the root directory and add your Web3Forms Access Key:
+
    ```env
    VITE_WEB3FORMS_ACCESS_KEY=your_access_key_here
    ```
+
 4. Run the development server
+
    ```sh
    npm run dev
    ```
