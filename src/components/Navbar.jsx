@@ -152,7 +152,7 @@ export function Navbar() {
             {/* Hamburger Morph */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="relative z-50 flex h-8 w-8 flex-col items-center justify-center gap-[5px] md:hidden"
+              className="relative z-50 flex h-8 w-8 cursor-pointer flex-col items-center justify-center gap-[5px] md:hidden"
               aria-label="Toggle Menu"
             >
               <motion.span
