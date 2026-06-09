@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
 import { PROFILE_DATA } from '../data/portfolioData';
 
 function TypewriterText({ text }) {
@@ -25,7 +25,7 @@ function TypewriterText({ text }) {
     };
 
     // Initial delay before typing starts
-    setTimeout(typeNextChar, 800);
+    setTimeout(typeNextChar, 300);
   }, [text]);
 
   return (
@@ -95,10 +95,10 @@ export function Hero() {
           {/* CTAs */}
           <motion.div variants={itemVariants} className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 w-full sm:w-auto">
             {/* Primary Button */}
-            <a href="#projects" className="group btn-island-primary w-full sm:w-auto justify-center shadow-md dark:shadow-none">
-              <span className="pl-2">View Projects</span>
-              <div className="btn-icon-wrapper">
-                <ArrowUpRight className="h-4 w-4" />
+            <a href={PROFILE_DATA.contact.linkedin} target="_blank" rel="noreferrer" className="group btn-island-primary w-full sm:w-52 h-14 justify-center shadow-md dark:shadow-none">
+              <span className="pl-2 whitespace-nowrap">LinkedIn Profile</span>
+              <div className="btn-icon-wrapper shrink-0">
+                <Linkedin className="h-4 w-4" />
               </div>
             </a>
 
@@ -107,10 +107,10 @@ export function Hero() {
               href={PROFILE_DATA.contact.github}
               target="_blank"
               rel="noreferrer"
-              className="group flex w-full sm:w-auto items-center justify-center gap-3 rounded-full border border-zinc-300 bg-white px-6 py-3 text-sm font-semibold text-zinc-700 transition-all duration-300 ease-[var(--ease-ui)] hover:bg-zinc-50 hover:text-zinc-900 hover:border-zinc-400 active:scale-[0.97] shadow-sm dark:shadow-none dark:border-zinc-800 dark:bg-transparent dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white dark:hover:border-zinc-700"
+              className="group flex w-full sm:w-52 h-14 items-center justify-center gap-3 rounded-full border border-zinc-300 bg-white px-6 text-sm font-semibold text-zinc-700 transition-all duration-300 ease-[var(--ease-ui)] hover:bg-zinc-50 hover:text-zinc-900 hover:border-zinc-400 active:scale-[0.97] shadow-sm dark:shadow-none dark:border-zinc-800 dark:bg-transparent dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white dark:hover:border-zinc-700"
             >
-              <Github className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
-              <span>GitHub Profile</span>
+              <Github className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
+              <span className="whitespace-nowrap">GitHub Profile</span>
             </a>
           </motion.div>
         </motion.div>

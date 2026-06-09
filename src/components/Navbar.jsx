@@ -47,12 +47,12 @@ export function Navbar() {
   }, [isOpen]);
 
   const navVariants = {
-    hidden: { y: -100, opacity: 0 },
+    hidden: { y: -20, opacity: 0 },
     visible: { 
       y: 0, 
       opacity: 1,
       transition: { 
-        duration: 0.8, 
+        duration: 0.5, 
         ease: [0.23, 1, 0.32, 1] 
       }
     }
@@ -143,7 +143,7 @@ export function Navbar() {
             <ThemeToggle />
             
             <a 
-              href="#contact" 
+              href="#connect" 
               className="hidden md:flex items-center justify-center rounded-full bg-zinc-900 px-5 py-2 text-xs font-bold text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
             >
               Let's Talk
@@ -199,13 +199,13 @@ export function Navbar() {
               ))}
               
               <motion.div variants={mobileLinkVariants} className="mt-8 flex justify-center gap-6">
-                <a href={PROFILE_DATA.contact.github} target="_blank" rel="noreferrer" className="btn-icon-wrapper w-12 h-12">
+                <a href={PROFILE_DATA.contact.github} target="_blank" rel="noreferrer" className="btn-icon-wrapper w-12 h-12" aria-label="GitHub Profile">
                   <Github className="h-6 w-6 text-zinc-900 dark:text-white" />
                 </a>
-                <a href={PROFILE_DATA.contact.linkedin} target="_blank" rel="noreferrer" className="btn-icon-wrapper w-12 h-12">
+                <a href={PROFILE_DATA.contact.linkedin} target="_blank" rel="noreferrer" className="btn-icon-wrapper w-12 h-12" aria-label="LinkedIn Profile">
                   <Linkedin className="h-6 w-6 text-zinc-900 dark:text-white" />
                 </a>
-                <a href={`mailto:${PROFILE_DATA.contact.email}`} className="btn-icon-wrapper w-12 h-12">
+                <a href={`mailto:${PROFILE_DATA.contact.email}`} className="btn-icon-wrapper w-12 h-12" aria-label="Send Email">
                   <Mail className="h-6 w-6 text-zinc-900 dark:text-white" />
                 </a>
               </motion.div>
