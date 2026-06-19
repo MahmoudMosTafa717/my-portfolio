@@ -108,7 +108,7 @@ export function Navbar() {
         {/* Floating Glass Pill */}
         <div className="flex items-center gap-8 rounded-full border border-zinc-200 bg-white/70 px-6 py-3 shadow-2xl backdrop-blur-md dark:bg-zinc-950/40 dark:border-white/10 transition-colors duration-500">
           
-          <a href="#home" className="text-xl font-bold tracking-tighter text-zinc-900 dark:text-white transition-colors duration-500">
+          <a href="#home" aria-label="Home" className="text-xl font-bold tracking-tighter text-zinc-900 dark:text-white transition-colors duration-500">
             M<span className="text-gradient">.</span>
           </a>
 
@@ -200,13 +200,13 @@ export function Navbar() {
               
               <motion.div variants={mobileLinkVariants} className="mt-8 flex justify-center gap-6">
                 <a href={PROFILE_DATA.contact.github} target="_blank" rel="noreferrer" className="btn-icon-wrapper w-12 h-12" aria-label="GitHub Profile">
-                  <Github className="h-6 w-6 text-zinc-900 dark:text-white" />
+                  <Github className="h-6 w-6 text-zinc-900 dark:text-white" aria-hidden="true" />
                 </a>
                 <a href={PROFILE_DATA.contact.linkedin} target="_blank" rel="noreferrer" className="btn-icon-wrapper w-12 h-12" aria-label="LinkedIn Profile">
-                  <Linkedin className="h-6 w-6 text-zinc-900 dark:text-white" />
+                  <Linkedin className="h-6 w-6 text-zinc-900 dark:text-white" aria-hidden="true" />
                 </a>
                 <a href={`mailto:${PROFILE_DATA.contact.email}`} className="btn-icon-wrapper w-12 h-12" aria-label="Send Email">
-                  <Mail className="h-6 w-6 text-zinc-900 dark:text-white" />
+                  <Mail className="h-6 w-6 text-zinc-900 dark:text-white" aria-hidden="true" />
                 </a>
               </motion.div>
             </div>

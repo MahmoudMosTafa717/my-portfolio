@@ -1,5 +1,8 @@
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Code2 } from 'lucide-react';
 import { SKILLS_DATA } from '../data/portfolioData';
+import { TiltCard3D } from './ui/TiltCard3D';
 
 import { 
   SiTypescript, SiTailwindcss, SiNextdotjs, SiMongodb, SiExpress,
@@ -75,7 +78,7 @@ export function Skills() {
   return (
     <section id="skills" className="relative w-full py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-16 flex flex-col items-center text-center">
+        <div className="mb-24 flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,24 +108,29 @@ export function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] }}
-                className={`bezel-shell ${isWideLg ? 'lg:col-span-2' : 'lg:col-span-1'} ${isWideMd ? 'md:col-span-2' : 'md:col-span-1'} col-span-1`}
+                className={`bezel-shell ${isWideLg ? 'lg:col-span-2' : 'lg:col-span-1'} ${isWideMd ? 'md:col-span-2' : 'md:col-span-1'} col-span-1 h-full`}
               >
-                <div className="bezel-core h-full p-8">
-                  <h3 className="mb-6 text-xl font-bold text-zinc-900 dark:text-white">
-                    {category.category}
-                  </h3>
-                  <div className="flex flex-wrap gap-4">
-                    {category.items.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group flex items-center gap-3 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm transition-all hover:scale-105 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300"
-                      >
-                        {iconMap[item.icon] || <Code2 strokeWidth={1.5} className="h-5 w-5 text-zinc-500" />}
-                        <span>{item.name}</span>
-                      </div>
-                    ))}
+                <TiltCard3D scaleOnHover={1.02} className="h-full" containerClassName="h-full">
+                  <div className="bezel-core h-full p-8">
+                    <h3 className="mb-6 text-xl font-bold text-zinc-900 dark:text-white">
+                      {category.category}
+                    </h3>
+                    <div className="flex flex-wrap gap-4">
+                      {category.items.map((item) => {
+                        const iconEl = iconMap[item.icon] || <Code2 strokeWidth={1.5} className="h-5 w-5 text-zinc-500" />;
+                        return (
+                          <div
+                            key={item.name}
+                            className="group flex items-center gap-3 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm transition-all hover:scale-105 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300"
+                          >
+                            {React.cloneElement(iconEl, { 'aria-hidden': 'true' })}
+                            <span>{item.name}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
+                </TiltCard3D>
               </motion.div>
             );
           })}
