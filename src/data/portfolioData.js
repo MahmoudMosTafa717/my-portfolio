@@ -107,7 +107,7 @@ export const PROJECTS_DATA = [
     image: "/images/projects/diagnotech.png",
     tags: ["React", "Node.js", "MongoDB", "Flask", "Machine Learning"],
     github: "https://github.com/MahmoudMosTafa717/0009-DaignoTech-Project",
-    demo: "https://diagnotech.netlify.app/"
+    demo: "https://diagnotech-frontend.vercel.app/"
   },
   {
     id: 2,
@@ -116,7 +116,7 @@ export const PROJECTS_DATA = [
     image: "/images/projects/naqla.png",
     tags: ["React", "Vite", "Node.js", "Redis", "BullMQ", "Pinecone"],
     github: "https://github.com/orgs/RecruitAIApp/repositories",
-    demo: "#"
+    demo: "https://naqla-recruiter.vercel.app/"
   },
   {
     id: 3,
@@ -126,6 +126,15 @@ export const PROJECTS_DATA = [
     tags: ["Angular", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com/MahmoudMosTafa717/finance-tracker-pro",
     demo: "https://mohamedwael21.github.io/finance-tracker-pro/#/dashboard"
+  },
+  {
+    id: 4,
+    title: "ShopWave",
+    description: "A modern e-commerce platform with robust product management, user authentication, and seamless checkout experience.",
+    image: "/images/projects/shopwave.png",
+    tags: ["React", "Node.js", "Express.js", "MongoDB"],
+    github: "https://github.com/MahmoudMosTafa717/ShopWave",
+    demo: "https://shop-wave-three-nu.vercel.app/"
   }
 ];
 

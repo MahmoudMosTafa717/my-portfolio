@@ -65,7 +65,7 @@ export function About() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] }}
-                    className="flex flex-col justify-center rounded-2xl border border-zinc-200 bg-white/50 p-6 dark:border-zinc-800/50 dark:bg-zinc-950/50 transition-colors duration-500 shadow-sm"
+                    className="flex flex-col justify-center rounded-2xl border border-zinc-200 bg-white/50 p-4 sm:p-6 dark:border-zinc-800/50 dark:bg-zinc-950/50 transition-colors duration-500 shadow-sm"
                   >
                     <span className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white transition-colors duration-500">
                       <AnimatedCounter value={stat.value} />
