@@ -5,14 +5,9 @@ export function useTheme() {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
       const savedTheme = window.localStorage.getItem('theme');
-      if (savedTheme) {
-        return savedTheme;
-      }
-      if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-        return 'light';
-      }
+      if (savedTheme) return savedTheme;
     }
-    return 'dark'; // Dark mode by default
+    return 'light'; // Light mode by default
   });
 
   useEffect(() => {
