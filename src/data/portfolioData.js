@@ -20,7 +20,12 @@ export const PROFILE_DATA = {
     email: "mhmodmostafa127@gmail.com",
     location: "Giza, Egypt",
     linkedin: "https://linkedin.com/in/mahmoud-mostafa-saber",
-    github: "https://github.com/MahmoudMosTafa717"
+    github: "https://github.com/MahmoudMosTafa717",
+    cv: {
+      view: "https://drive.google.com/file/d/1t8Uzfy2IwW6bFC1DOpXGViPaInlO4uuc/view?usp=sharing",
+      preview: "https://drive.google.com/file/d/1t8Uzfy2IwW6bFC1DOpXGViPaInlO4uuc/preview",
+      download: "https://drive.google.com/uc?export=download&id=1t8Uzfy2IwW6bFC1DOpXGViPaInlO4uuc"
+    }
   }
 };
 
@@ -102,12 +107,13 @@ export const SKILLS_DATA = [
 export const PROJECTS_DATA = [
   {
     id: 1,
-    title: "DiagnoTech",
-    description: "Built a MERN web application for AI-powered healthcare, symptom analysis, and doctor-patient matching. Improved disease prediction accuracy by ~20% through model selection and hyperparameter tuning, integrated via a Flask API.",
-    image: "/images/projects/diagnotech.png",
-    tags: ["React", "Node.js", "MongoDB", "Flask", "Machine Learning"],
-    github: "https://github.com/MahmoudMosTafa717/0009-DaignoTech-Project",
-    demo: "https://diagnotech-frontend.vercel.app/"
+    title: "Draya",
+    description: "An intelligent AI-powered learning management and exam assessment platform (درايَة — منصة التعلم الذكي). Features automated exam grading, smart student evaluation, performance analytics, and interactive educational workflows.",
+    image: "/images/projects/Draya.png",
+    tags: ["Angular", "TypeScript", "Tailwind CSS", "AI Assessment", "REST APIs"],
+    github: "https://github.com/DrayaTeam/Draya-Web",
+    demo: "https://draya-lms.vercel.app/",
+    video: "https://drive.google.com/file/d/1YJcTnh8olDKRj1fuuvY_GbUmIByh3Fba/preview"
   },
   {
     id: 2,
@@ -116,19 +122,32 @@ export const PROJECTS_DATA = [
     image: "/images/projects/naqla.png",
     tags: ["React", "Vite", "Node.js", "Redis", "BullMQ", "Pinecone"],
     github: "https://github.com/orgs/RecruitAIApp/repositories",
-    demo: "https://naqla-recruiter.vercel.app/"
+    demo: "https://naqla-recruiter.vercel.app/",
+    video: "https://drive.google.com/file/d/12UwymNW37-KzFsPuojuCheNFSM6vasJz/preview"
   },
   {
     id: 3,
-    title: "Finance Tracker",
+    title: "FinTracker",
     description: "Full-stack finance management application with core financial workflows including transaction tracking, recurring transactions, analytics, and reporting.",
-    image: "/images/projects/finance.png",
+    image: "/images/projects/FinTracker.png",
+    hoverImage: "/images/projects/finance.png",
     tags: ["Angular", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com/MahmoudMosTafa717/finance-tracker-pro",
-    demo: "https://mohamedwael21.github.io/finance-tracker-pro/#/dashboard"
+    demo: "https://mohamedwael21.github.io/finance-tracker-pro",
+    video: "https://drive.google.com/file/d/1x52J5cAleYujvti4DYHWDma7KYMTUgHZ/preview"
   },
   {
     id: 4,
+    title: "DiagnoTech",
+    description: "Built a MERN web application for AI-powered healthcare, symptom analysis, and doctor-patient matching. Improved disease prediction accuracy by ~20% through model selection and hyperparameter tuning, integrated via a Flask API.",
+    image: "/images/projects/diagnotech.png",
+    tags: ["React", "Node.js", "MongoDB", "Flask", "Machine Learning"],
+    github: "https://github.com/MahmoudMosTafa717/0009-DaignoTech-Project",
+    demo: "https://diagnotech-frontend.vercel.app/",
+    video: "https://drive.google.com/file/d/1bEbRVvTX_spEDCorfvy7EX264QsOz7SS/preview"
+  },
+  {
+    id: 5,
     title: "ShopWave",
     description: "A modern e-commerce platform with robust product management, user authentication, and seamless checkout experience.",
     image: "/images/projects/shopwave.png",
@@ -182,10 +201,10 @@ export const EXPERIENCE_DATA = [
 export const EDUCATION_DATA = [
   {
     id: 1,
-    degree: "Professional Diploma in Web & UI Development",
+    degree: "ITI 9-Month Professional Training Program",
     institution: "Information Technology Institute (ITI), Smart Village",
-    period: "10/2025 – Present",
-    details: "9-Month Professional Training Program in Web & User Interface Development Track."
+    period: "10/2025 – 08/2026",
+    details: "Software Development - Web and User Interface Development"
   },
   {
     id: 2,

@@ -23,7 +23,7 @@ function TimelineContent({ item, Icon }) {
           {item.role || item.degree}
         </h3>
       </div>
-      <h4 className="text-md font-medium text-zinc-600 dark:text-zinc-400 mb-4 transition-colors duration-500">
+      <h4 className="text-xs sm:text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-4 transition-colors duration-500 whitespace-nowrap overflow-hidden text-ellipsis" title={item.company || item.institution}>
         {item.company || item.institution}
       </h4>
       

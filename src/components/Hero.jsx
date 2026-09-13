@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, FileText } from 'lucide-react';
 import { PROFILE_DATA } from '../data/portfolioData';
+import { CvModal } from './CvModal';
 
 function TypewriterText({ text }) {
   const [displayedText, setDisplayedText] = useState('');
@@ -45,6 +46,8 @@ function TypewriterText({ text }) {
 }
 
 export function Hero() {
+  const [isCvOpen, setIsCvOpen] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,28 +96,58 @@ export function Hero() {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 w-full sm:w-auto">
-            {/* Primary Button */}
-            <a href={PROFILE_DATA.contact.linkedin} target="_blank" rel="noreferrer" className="group btn-island-primary w-full sm:w-52 h-14 justify-center shadow-md dark:shadow-none">
-              <span className="pl-2 whitespace-nowrap">LinkedIn Profile</span>
-              <div className="btn-icon-wrapper shrink-0">
-                <Linkedin className="h-4 w-4" />
-              </div>
+          <motion.div variants={itemVariants} className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-4 w-full sm:w-auto">
+            {/* LinkedIn Button */}
+            <a 
+              href={PROFILE_DATA.contact.linkedin} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="group flex w-full sm:w-44 h-14 items-center justify-center gap-2.5 rounded-full border border-zinc-300 bg-white px-5 text-sm font-semibold text-zinc-700 transition-all duration-300 ease-[var(--ease-ui)] hover:bg-zinc-50 hover:text-zinc-900 hover:border-zinc-400 active:scale-[0.97] shadow-sm dark:shadow-none dark:border-zinc-800 dark:bg-transparent dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white dark:hover:border-zinc-700"
+            >
+              <Linkedin className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
+              <span className="whitespace-nowrap">LinkedIn</span>
             </a>
 
-            {/* Secondary Button */}
+            {/* Featured CV Button (Centered with attractive animated glow and pulsing beacon) */}
+            <div className="relative w-full sm:w-auto group">
+              {/* Subtle animated ambient glow */}
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-brand-plum via-purple-500 to-brand-indigo opacity-70 blur-sm transition-all duration-500 group-hover:opacity-100 group-hover:blur-md" />
+              
+              <button
+                type="button"
+                onClick={() => setIsCvOpen(true)}
+                className="relative flex w-full sm:w-52 h-14 items-center justify-center gap-3 rounded-full bg-zinc-900 px-6 text-sm font-bold text-white transition-all duration-300 ease-[var(--ease-ui)] hover:bg-zinc-800 active:scale-[0.97] dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 shadow-xl cursor-pointer"
+              >
+                {/* Live pulsing dot indicator */}
+                <span className="relative flex h-2.5 w-2.5 shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-plum opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-plum" />
+                </span>
+                
+                <span className="whitespace-nowrap font-bold">Review CV</span>
+                
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10 text-white dark:bg-black/10 dark:text-zinc-900 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <FileText className="h-3.5 w-3.5" />
+                </div>
+              </button>
+            </div>
+
+            {/* GitHub Button */}
             <a
               href={PROFILE_DATA.contact.github}
               target="_blank"
               rel="noreferrer"
-              className="group flex w-full sm:w-52 h-14 items-center justify-center gap-3 rounded-full border border-zinc-300 bg-white px-6 text-sm font-semibold text-zinc-700 transition-all duration-300 ease-[var(--ease-ui)] hover:bg-zinc-50 hover:text-zinc-900 hover:border-zinc-400 active:scale-[0.97] shadow-sm dark:shadow-none dark:border-zinc-800 dark:bg-transparent dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white dark:hover:border-zinc-700"
+              className="group flex w-full sm:w-44 h-14 items-center justify-center gap-2.5 rounded-full border border-zinc-300 bg-white px-5 text-sm font-semibold text-zinc-700 transition-all duration-300 ease-[var(--ease-ui)] hover:bg-zinc-50 hover:text-zinc-900 hover:border-zinc-400 active:scale-[0.97] shadow-sm dark:shadow-none dark:border-zinc-800 dark:bg-transparent dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white dark:hover:border-zinc-700"
             >
               <Github className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
-              <span className="whitespace-nowrap">GitHub Profile</span>
+              <span className="whitespace-nowrap">GitHub</span>
             </a>
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Embedded CV Modal */}
+      <CvModal isOpen={isCvOpen} onClose={() => setIsCvOpen(false)} />
     </section>
   );
 }
