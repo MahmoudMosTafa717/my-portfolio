@@ -127,6 +127,16 @@ export const PROJECTS_DATA = [
   },
   {
     id: 3,
+    title: "DiagnoTech",
+    description: "Built a MERN web application for AI-powered healthcare, symptom analysis, and doctor-patient matching. Improved disease prediction accuracy by ~20% through model selection and hyperparameter tuning, integrated via a Flask API.",
+    image: "/images/projects/diagnotech.png",
+    tags: ["React", "Node.js", "MongoDB", "Flask", "Machine Learning"],
+    github: "https://github.com/MahmoudMosTafa717/0009-DaignoTech-Project",
+    demo: "https://diagnotech-frontend.vercel.app/",
+    video: "https://drive.google.com/file/d/1bEbRVvTX_spEDCorfvy7EX264QsOz7SS/preview"
+  },
+  {
+    id: 4,
     title: "FinTracker",
     description: "Full-stack finance management application with core financial workflows including transaction tracking, recurring transactions, analytics, and reporting.",
     image: "/images/projects/FinTracker.png",
@@ -135,16 +145,6 @@ export const PROJECTS_DATA = [
     github: "https://github.com/MahmoudMosTafa717/finance-tracker-pro",
     demo: "https://mohamedwael21.github.io/finance-tracker-pro",
     video: "https://drive.google.com/file/d/1x52J5cAleYujvti4DYHWDma7KYMTUgHZ/preview"
-  },
-  {
-    id: 4,
-    title: "DiagnoTech",
-    description: "Built a MERN web application for AI-powered healthcare, symptom analysis, and doctor-patient matching. Improved disease prediction accuracy by ~20% through model selection and hyperparameter tuning, integrated via a Flask API.",
-    image: "/images/projects/diagnotech.png",
-    tags: ["React", "Node.js", "MongoDB", "Flask", "Machine Learning"],
-    github: "https://github.com/MahmoudMosTafa717/0009-DaignoTech-Project",
-    demo: "https://diagnotech-frontend.vercel.app/",
-    video: "https://drive.google.com/file/d/1bEbRVvTX_spEDCorfvy7EX264QsOz7SS/preview"
   },
   {
     id: 5,
