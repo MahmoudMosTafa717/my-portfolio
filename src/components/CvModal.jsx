@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Download, FileText, Loader2 } from 'lucide-react';
 import { PROFILE_DATA } from '../data/portfolioData';
@@ -6,6 +6,7 @@ import { PROFILE_DATA } from '../data/portfolioData';
 export function CvModal({ isOpen, onClose }) {
   const [isLoading, setIsLoading] = useState(true);
   const cv = PROFILE_DATA.contact.cv;
+  const timerRef = useRef(null);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -15,12 +16,16 @@ export function CvModal({ isOpen, onClose }) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleKeyDown);
       setIsLoading(true);
+      // Google Drive iframes don't always fire onLoad; hide spinner after 3s fallback
+      timerRef.current = setTimeout(() => setIsLoading(false), 3000);
     } else {
       document.body.style.overflow = 'unset';
+      clearTimeout(timerRef.current);
     }
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
+      clearTimeout(timerRef.current);
     };
   }, [isOpen, onClose]);
 
@@ -68,8 +73,9 @@ export function CvModal({ isOpen, onClose }) {
 
               <div className="flex items-center gap-2">
                 <a
-                  href="/Mahmoud_Mostafa_CV.pdf"
-                  download="Mahmoud_Mostafa_CV.pdf"
+                  href={cv.download}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-1.5 rounded-full border border-zinc-200 bg-zinc-50 px-3.5 py-1.5 text-xs font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
                   title="Download PDF"
                 >
@@ -96,7 +102,7 @@ export function CvModal({ isOpen, onClose }) {
               </div>
             </div>
 
-            {/* PDF Viewer — embed local file */}
+            {/* PDF Viewer — Google Drive preview embed */}
             <div className="relative flex-1 w-full overflow-hidden rounded-[calc(2rem-0.5rem)] bg-zinc-900 shadow-inner">
               {isLoading && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-zinc-900 text-zinc-400 z-10">
@@ -105,10 +111,13 @@ export function CvModal({ isOpen, onClose }) {
                 </div>
               )}
               <iframe
-                src="/Mahmoud_Mostafa_CV.pdf#toolbar=0"
+                src={cv.preview}
                 title="Mahmoud Mostafa CV"
                 className="w-full h-full border-0"
-                onLoad={() => setIsLoading(false)}
+                onLoad={() => {
+                  clearTimeout(timerRef.current);
+                  setIsLoading(false);
+                }}
               />
             </div>
           </motion.div>

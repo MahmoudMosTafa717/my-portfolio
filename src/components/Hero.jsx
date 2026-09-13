@@ -92,7 +92,7 @@ export function Hero() {
 
           {/* Subheadline */}
           <motion.p variants={itemVariants} className="mb-12 max-w-2xl text-lg font-medium leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-xl transition-colors duration-500">
-            Hi, I'm <TypewriterText text={PROFILE_DATA.name} />.<br /> A Full-Stack Software Engineer specializing in scalable web applications, React ecosystems, and AI-powered solutions.
+            Hi, I'm <TypewriterText text={PROFILE_DATA.name} />.<br /> A Full-Stack Software Engineer who builds production-ready web applications with the <span className="text-zinc-900 dark:text-white font-semibold">React ecosystem</span>, <span className="text-zinc-900 dark:text-white font-semibold">Angular</span>, <span className="text-zinc-900 dark:text-white font-semibold">Node.js & Express</span> — and brings them to life with <span className="text-zinc-900 dark:text-white font-semibold">AI integration</span>.
           </motion.p>
 
           {/* CTAs */}

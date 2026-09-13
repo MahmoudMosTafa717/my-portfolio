@@ -8,7 +8,7 @@ export const PROFILE_DATA = {
     "AI-Powered Applications Developer",
     "Software Engineer"
   ],
-  intro: "Computer Science graduate (2025) and trainee at ITI 9-month Professional Diploma, Smart Village branch (Web & UI Development Track), passionate about building scalable web applications and AI-powered solutions. Seeking opportunities to contribute as a Full-Stack Software Engineer while continuously growing technical expertise in modern web technologies.",
+  intro: "Computer Science graduate (2025) and graduate of the ITI 9-Month Professional Diploma at Smart Village (Web & UI Development Track). I build scalable full-stack web applications using the React ecosystem, Angular, and Node.js — and integrate AI to make them smarter. I'm actively seeking a Full-Stack Software Engineer role where I can ship real value from day one and keep growing with the team.",
   stats: [
     { label: "Projects Built", value: "20+" },
     { label: "Technologies Used", value: "15+" },
@@ -211,6 +211,6 @@ export const EDUCATION_DATA = [
     degree: "B.Sc. Computers and Information Technology",
     institution: "The Egyptian E-Learning University (EELU)",
     period: "09/2021 – 06/2025",
-    details: "GPA: 3.45 / 4.0 (Very Good with Honors). Graduation Project Grade: Excellent."
+    details: "GPA: 3.45 / 4.0 (Very Good with Honors)\nGraduation Project Grade: Excellent"
   }
 ];
