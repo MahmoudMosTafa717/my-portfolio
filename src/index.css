@@ -33,6 +33,13 @@
     color: var(--foreground);
     @apply antialiased selection:bg-brand-plum/30 transition-colors duration-500 ease-[var(--ease-ui)];
   }
+
+  /* Hide native cursor on mouse devices — custom cursor takes over */
+  @media (pointer: fine) {
+    *, *::before, *::after {
+      cursor: none !important;
+    }
+  }
 }
 
 @layer utilities {

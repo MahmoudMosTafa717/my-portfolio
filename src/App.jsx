@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { CustomCursor } from './components/CustomCursor';
 
 // Lazy load components that are below the fold
 const About = React.lazy(() => import('./components/About').then(module => ({ default: module.About })));
@@ -13,6 +14,7 @@ const Footer = React.lazy(() => import('./components/Footer').then(module => ({ 
 function App() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
+      <CustomCursor />
       <Navbar />
       <main id="main-content">
         <Hero />
