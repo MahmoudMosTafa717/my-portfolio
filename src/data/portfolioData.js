@@ -18,7 +18,7 @@ export const PROFILE_DATA = {
   contact: {
     phone: "(+20) 106 159 8031",
     email: "mhmodmostafa127@gmail.com",
-    location: "Giza, Egypt",
+    location: "Cairo, Egypt",
     linkedin: "https://linkedin.com/in/mahmoud-mostafa-saber",
     github: "https://github.com/MahmoudMosTafa717",
     cv: {
@@ -40,6 +40,7 @@ export const SKILLS_DATA = [
       { name: "React.js", icon: "react" },
       { name: "Next.js", icon: "nextjs" },
       { name: "Angular", icon: "angular" },
+      { name: "Vue.js", icon: "vuejs" },
       { name: "Tailwind CSS", icon: "tailwindcss" },
       { name: "Bootstrap", icon: "bootstrap" },
       { name: "UI/UX Design Principles", icon: "uiux" }
@@ -160,12 +161,12 @@ export const PROJECTS_DATA = [
 export const EXPERIENCE_DATA = [
   {
     id: 1,
-    role: "Node.js Backend Development Internship",
+    role: "Full Stack Developer",
     company: "Web Masters",
     period: "07/2025 – 09/2025",
     points: [
-      "Developed RESTful APIs and real-time features using Socket.IO.",
-      "Collaborated with a team on databases and backend services for multiple web applications."
+      "Translated Figma designs into responsive, pixel-perfect UIs with reusable components, clean code, and cross-browser compatibility.",
+      "Developed RESTful APIs and real-time features using Node.js & Socket.IO, collaborating on database integration and backend services."
     ]
   },
   {
@@ -181,7 +182,7 @@ export const EXPERIENCE_DATA = [
     id: 3,
     role: "Full-Stack AI Code Reviewer",
     company: "Outlier (Freelance)",
-    period: "11/2024 – 04/2025",
+    period: "11/2024 – 06/2025",
     points: [
       "Reviewed and evaluated 50+ LLM-generated frontend and backend coding tasks.",
       "Identified issues and provided technical feedback to improve AI model reasoning, code quality, and overall performance."

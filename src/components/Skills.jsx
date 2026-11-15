@@ -6,7 +6,7 @@ import { TiltCard3D } from './ui/TiltCard3D';
 
 import { 
   SiTypescript, SiTailwindcss, SiNextdotjs, SiMongodb, SiExpress,
-  SiRedux, SiReactivex, SiAngular, SiPostman, SiBootstrap, 
+  SiRedux, SiReactivex, SiAngular, SiVuedotjs, SiPostman, SiBootstrap, 
   SiReactquery, SiJsonwebtokens, SiMongoose, SiDocker, SiSlack, 
   SiJira, SiTrello, SiVite, SiVercel, SiCloudflare
 } from 'react-icons/si';
@@ -28,6 +28,7 @@ const iconMap = {
   react: <FaReact className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" style={{ color: '#61DAFB' }} />,
   nextjs: <SiNextdotjs className="h-5 w-5 text-black transition-transform duration-300 group-hover:scale-110 dark:text-white" />,
   angular: <SiAngular className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" style={{ color: '#DD0031' }} />,
+  vuejs: <SiVuedotjs className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" style={{ color: '#4FC08D' }} />,
   tailwindcss: <SiTailwindcss className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" style={{ color: '#06B6D4' }} />,
   bootstrap: <SiBootstrap className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" style={{ color: '#7952B3' }} />,
   uiux: <FaPenNib className="h-5 w-5 text-brand-plum transition-transform duration-300 group-hover:scale-110" />,

@@ -34,10 +34,27 @@
     @apply antialiased selection:bg-brand-plum/30 transition-colors duration-500 ease-[var(--ease-ui)];
   }
 
-  /* Hide native cursor on mouse devices — custom cursor takes over */
+  /* Custom cursor on desktop: non-interactive canvas hides native cursor, but all interactive/clickable elements show pointer */
   @media (pointer: fine) {
     *, *::before, *::after {
-      cursor: none !important;
+      cursor: none;
+    }
+
+    a,
+    a *,
+    button,
+    button *,
+    [role="button"],
+    [role="button"] *,
+    input,
+    textarea,
+    select,
+    label,
+    summary,
+    [tabindex]:not([tabindex="-1"]),
+    .cursor-pointer,
+    .cursor-pointer * {
+      cursor: pointer !important;
     }
   }
 }

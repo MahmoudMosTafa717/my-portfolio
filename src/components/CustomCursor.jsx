@@ -42,7 +42,7 @@ export function CustomCursor() {
     // Detect interactive elements
     const onMouseOver = (e) => {
       const target = e.target.closest(
-        'a, button, [role="button"], input, textarea, select, label, [tabindex]'
+        'a, button, [role="button"], input, textarea, select, label, [tabindex], .cursor-pointer, [onclick]'
       );
       setHovered(!!target);
     };

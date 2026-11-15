@@ -6,7 +6,7 @@
 Mahmoud Mostafa Saber is an Egyptian software engineer and graduate of the Information Technology Institute (ITI 9-Month Professional Diploma at Smart Village, Web & UI Development Track, 2025–2026) and Bachelor of Science in Computers and Information Technology from EELU (2021–2025, GPA 3.45 / 4.0, Very Good with Honors).
 
 ## Core Capabilities & Skills
-- **Frontend**: React.js, Next.js, Angular, TypeScript, JavaScript (ES6+), Tailwind CSS, Bootstrap, Responsive UI/UX.
+- **Frontend**: React.js, Next.js, Angular, Vue.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Bootstrap, Responsive UI/UX.
 - **State & Data**: Redux Toolkit, Zustand, TanStack Query, NgRx, RxJS.
 - **Backend & APIs**: Node.js, Express.js, RESTful APIs, JWT Authentication, WebSockets, MongoDB, Mongoose, SQL.
 - **Agentic AI & LLMs**: LLM Integration, Prompt Engineering, Fine Tuning, RAG Systems, Vector Databases (Pinecone).
