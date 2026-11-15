@@ -45,19 +45,33 @@ export function Projects() {
                   <TiltCard3D scaleOnHover={1.03}>
                     <div className="bezel-shell group relative overflow-hidden">
                       <div className="bezel-core aspect-video w-full relative overflow-hidden">
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className={`h-full w-full object-cover transition-all duration-700 ease-[var(--ease-ui)] ${
-                            project.hoverImage ? 'group-hover:opacity-0 group-hover:scale-105' : 'group-hover:scale-105'
-                          }`}
-                        />
-                        {project.hoverImage && (
+                        <picture>
+                          <source srcSet={project.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} type="image/webp" />
                           <img 
-                            src={project.hoverImage} 
-                            alt={`${project.title} preview`} 
-                            className="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-700 ease-[var(--ease-ui)] group-hover:opacity-100 group-hover:scale-105"
+                            src={project.image} 
+                            alt={project.title} 
+                            width="800"
+                            height="450"
+                            loading="lazy"
+                            decoding="async"
+                            className={`h-full w-full object-cover transition-all duration-700 ease-[var(--ease-ui)] ${
+                              project.hoverImage ? 'group-hover:opacity-0 group-hover:scale-105' : 'group-hover:scale-105'
+                            }`}
                           />
+                        </picture>
+                        {project.hoverImage && (
+                          <picture>
+                            <source srcSet={project.hoverImage.replace(/\.(png|jpg|jpeg)$/i, '.webp')} type="image/webp" />
+                            <img 
+                              src={project.hoverImage} 
+                              alt={`${project.title} preview`} 
+                              width="800"
+                              height="450"
+                              loading="lazy"
+                              decoding="async"
+                              className="absolute inset-0 h-full w-full object-cover opacity-0 transition-all duration-700 ease-[var(--ease-ui)] group-hover:opacity-100 group-hover:scale-105"
+                            />
+                          </picture>
                         )}
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none" />

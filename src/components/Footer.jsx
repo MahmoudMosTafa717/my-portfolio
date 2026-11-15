@@ -16,6 +16,8 @@ function SocialLink({ href, icon: Icon, label, colorClass, external = true }) {
       >
         <Icon 
           className={`h-5 w-5 transition-transform duration-300 group-hover:scale-110 ${colorClass.icon}`} 
+          aria-label={label}
+          title={label}
         />
       </a>
       {/* Tooltip */}
@@ -45,7 +47,7 @@ export function Footer() {
           <div className="flex flex-col items-center text-center text-sm font-medium text-zinc-500 dark:text-zinc-400 transition-colors duration-500 md:gap-1">
             <p>© {new Date().getFullYear()} {PROFILE_DATA.name}. All rights reserved.</p>
             <p className="flex items-center gap-1 justify-center mt-2 md:mt-0">
-              Crafted with <Heart className="h-4 w-4 text-brand-plum animate-pulse" /> and React
+              Crafted with <Heart className="h-4 w-4 text-brand-plum animate-pulse" aria-hidden="true" /> and React
             </p>
           </div>
 

@@ -22,9 +22,9 @@ export const PROFILE_DATA = {
     linkedin: "https://linkedin.com/in/mahmoud-mostafa-saber",
     github: "https://github.com/MahmoudMosTafa717",
     cv: {
-      view: "https://drive.google.com/file/d/1t8Uzfy2IwW6bFC1DOpXGViPaInlO4uuc/view?usp=sharing",
-      preview: "https://drive.google.com/file/d/1t8Uzfy2IwW6bFC1DOpXGViPaInlO4uuc/preview",
-      download: "https://drive.google.com/uc?export=download&id=1t8Uzfy2IwW6bFC1DOpXGViPaInlO4uuc"
+      view: "https://drive.google.com/file/d/1zlTxNe_UTien-WYGGOim7mCgaor4Drzk/view?usp=sharing",
+      preview: "https://drive.google.com/file/d/1zlTxNe_UTien-WYGGOim7mCgaor4Drzk/preview",
+      download: "https://drive.google.com/uc?export=download&id=1zlTxNe_UTien-WYGGOim7mCgaor4Drzk"
     }
   }
 };
@@ -109,7 +109,7 @@ export const PROJECTS_DATA = [
     id: 1,
     title: "Draya",
     description: "An intelligent AI-powered learning management and exam assessment platform (درايَة — منصة التعلم الذكي). Features automated exam grading, smart student evaluation, performance analytics, and interactive educational workflows.",
-    image: "/images/projects/Draya.png",
+    image: "/images/projects/Draya.webp",
     tags: ["Angular", "TypeScript", "Tailwind CSS", "AI Assessment", "REST APIs"],
     github: "https://github.com/DrayaTeam/Draya-Web",
     demo: "https://draya-lms.vercel.app/",
@@ -119,7 +119,7 @@ export const PROJECTS_DATA = [
     id: 2,
     title: "Naqla",
     description: "AI-Powered Recruitment Platform that automates CV parsing, candidate screening, and profile evaluation using generative AI and Pinecone vector search.",
-    image: "/images/projects/naqla.png",
+    image: "/images/projects/naqla.webp",
     tags: ["React", "Vite", "Node.js", "Redis", "BullMQ", "Pinecone"],
     github: "https://github.com/orgs/RecruitAIApp/repositories",
     demo: "https://naqla-recruiter.vercel.app/",
@@ -129,7 +129,7 @@ export const PROJECTS_DATA = [
     id: 3,
     title: "DiagnoTech",
     description: "Built a MERN web application for AI-powered healthcare, symptom analysis, and doctor-patient matching. Improved disease prediction accuracy by ~20% through model selection and hyperparameter tuning, integrated via a Flask API.",
-    image: "/images/projects/diagnotech.png",
+    image: "/images/projects/diagnotech.webp",
     tags: ["React", "Node.js", "MongoDB", "Flask", "Machine Learning"],
     github: "https://github.com/MahmoudMosTafa717/0009-DaignoTech-Project",
     demo: "https://diagnotech-frontend.vercel.app/",
@@ -139,8 +139,8 @@ export const PROJECTS_DATA = [
     id: 4,
     title: "FinTracker",
     description: "Full-stack finance management application with core financial workflows including transaction tracking, recurring transactions, analytics, and reporting.",
-    image: "/images/projects/FinTracker.png",
-    hoverImage: "/images/projects/finance.png",
+    image: "/images/projects/FinTracker.webp",
+    hoverImage: "/images/projects/finance.webp",
     tags: ["Angular", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com/MahmoudMosTafa717/finance-tracker-pro",
     demo: "https://mohamedwael21.github.io/finance-tracker-pro",
@@ -150,7 +150,7 @@ export const PROJECTS_DATA = [
     id: 5,
     title: "ShopWave",
     description: "A modern e-commerce platform with robust product management, user authentication, and seamless checkout experience.",
-    image: "/images/projects/shopwave.png",
+    image: "/images/projects/shopwave.webp",
     tags: ["React", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com/MahmoudMosTafa717/ShopWave",
     demo: "https://shop-wave-three-nu.vercel.app/"
@@ -212,5 +212,34 @@ export const EDUCATION_DATA = [
     institution: "The Egyptian E-Learning University (EELU)",
     period: "09/2021 – 06/2025",
     details: "GPA: 3.45 / 4.0 (Very Good with Honors)\nGraduation Project Grade: Excellent"
+  }
+];
+
+export const CERTIFICATES_DATA = [
+  {
+    id: 1,
+    title: "EF SET English Certificate",
+    issuer: "EF Standard English Test (EF SET)",
+    level: "85/100 · C2 Proficient",
+    date: "01 Jul 2025",
+    skills: ["Reading Mastery", "Listening Comprehension", "CEFR C2 Proficiency"],
+    image: "/images/Certificates/EF SET Certificate Listening and Reading.webp",
+    fallbackImage: "/images/Certificates/EF SET Certificate Listening and Reading.png",
+    verificationUrl: null,
+    credentialNote: "Verified Score: 85/100 · C2 Proficient (CEFR)",
+    badgeColor: "from-fuchsia-600 to-purple-600"
+  },
+  {
+    id: 2,
+    title: "SmallTalk English Speaking Level Test",
+    issuer: "SmallTalk2.me",
+    level: "C1+ Advanced",
+    date: "01 Jul 2025",
+    skills: ["Spoken English Fluency", "Professional Conversational Proficiency", "Pronunciation & Coherence"],
+    image: "/images/Certificates/SmallTalk English Speaking Level.webp",
+    fallbackImage: "/images/Certificates/SmallTalk English Speaking Level.png",
+    verificationUrl: "https://app.smalltalk2.me/cert/f863efe3",
+    credentialNote: "Verified Credential ID: f863efe3",
+    badgeColor: "from-blue-600 to-cyan-600"
   }
 ];

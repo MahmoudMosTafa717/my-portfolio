@@ -8,6 +8,7 @@ const About = React.lazy(() => import('./components/About').then(module => ({ de
 const Skills = React.lazy(() => import('./components/Skills').then(module => ({ default: module.Skills })));
 const Projects = React.lazy(() => import('./components/Projects').then(module => ({ default: module.Projects })));
 const Experience = React.lazy(() => import('./components/Experience').then(module => ({ default: module.Experience })));
+const Certificates = React.lazy(() => import('./components/Certificates').then(module => ({ default: module.Certificates })));
 const Contact = React.lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 const Footer = React.lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 
@@ -23,6 +24,7 @@ function App() {
           <Skills />
           <Projects />
           <Experience />
+          <Certificates />
           <Contact />
         </Suspense>
       </main>

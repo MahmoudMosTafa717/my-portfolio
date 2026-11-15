@@ -15,6 +15,7 @@ export function TiltCard3D({
   scaleOnHover = 1.02,
 }) {
   const ref = useRef(null);
+  const rectRef = useRef(null);
   const shouldReduceMotion = useReducedMotion();
 
   // Mouse positions
@@ -38,13 +39,21 @@ export function TiltCard3D({
     [0.1, 0, 0.1]
   );
 
+  const handleMouseEnter = () => {
+    if (ref.current) {
+      rectRef.current = ref.current.getBoundingClientRect();
+    }
+  };
+
   const handleMouseMove = (e) => {
     if (shouldReduceMotion) return;
     
-    if (!ref.current) return;
+    if (!rectRef.current && ref.current) {
+      rectRef.current = ref.current.getBoundingClientRect();
+    }
+    if (!rectRef.current) return;
     
-    const rect = ref.current.getBoundingClientRect();
-    
+    const rect = rectRef.current;
     const width = rect.width;
     const height = rect.height;
     
@@ -59,6 +68,7 @@ export function TiltCard3D({
   };
 
   const handleMouseLeave = () => {
+    rectRef.current = null;
     if (shouldReduceMotion) return;
     
     x.set(0);
@@ -68,6 +78,7 @@ export function TiltCard3D({
   return (
     <div
       className={cn("relative [perspective:1000px]", containerClassName)}
+      onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={ref}

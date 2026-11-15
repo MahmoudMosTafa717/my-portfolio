@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
+  "version": "1.0.0",
+  "name": "Mahmoud Mostafa Saber Portfolio",
+  "description": "Portfolio of Mahmoud Mostafa Saber, Full-Stack Software Engineer specializing in scalable web applications, React, Node.js, and AI integrations.",
+  "publisher": {
+    "name": "Mahmoud Mostafa Saber",
+    "url": "https://mahmoud-mostafa.pages.dev"
+  },
+  "resources": [
+    {
+      "id": "portfolio-web",
+      "name": "Portfolio Website",
+      "type": "website",
+      "url": "https://mahmoud-mostafa.pages.dev",
+      "description": "Main portfolio site detailing projects, experience, skills, and certifications."
+    },
+    {
+      "id": "llms-txt",
+      "name": "LLMs.txt Documentation",
+      "type": "documentation",
+      "url": "https://mahmoud-mostafa.pages.dev/llms.txt",
+      "description": "Structured LLM-readable summary of Mahmoud Mostafa Saber's portfolio and skills."
+    }
+  ]
+}

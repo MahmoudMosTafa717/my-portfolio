@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Certificates', href: '#certificates' },
 ];
 
 export function Navbar() {
@@ -21,7 +22,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 50);
 
       // Active section detection
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'connect'];
+      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'certificates', 'connect'];
       let current = '';
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);

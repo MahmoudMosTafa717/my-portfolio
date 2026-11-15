@@ -60,10 +60,10 @@ export function CustomCursor() {
       ring.current.y += (mouse.current.y - ring.current.y) * LERP;
 
       if (dotRef.current) {
-        dotRef.current.style.transform = `translate(${mouse.current.x}px, ${mouse.current.y}px) translate(-50%, -50%)`;
+        dotRef.current.style.transform = `translate3d(${mouse.current.x}px, ${mouse.current.y}px, 0) translate3d(-50%, -50%, 0)`;
       }
       if (ringRef.current) {
-        ringRef.current.style.transform = `translate(${ring.current.x}px, ${ring.current.y}px) translate(-50%, -50%)`;
+        ringRef.current.style.transform = `translate3d(${ring.current.x}px, ${ring.current.y}px, 0) translate3d(-50%, -50%, 0)`;
       }
 
       rafId.current = requestAnimationFrame(animate);

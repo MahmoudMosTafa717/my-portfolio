@@ -1,0 +1,31 @@
+# Mahmoud Mostafa Saber - Full-Stack Software Engineer Portfolio
+
+> Full-Stack Software Engineer specializing in scalable web applications, React & Angular ecosystems, and AI-powered solutions.
+
+## Overview
+Mahmoud Mostafa Saber is an Egyptian software engineer and graduate of the Information Technology Institute (ITI 9-Month Professional Diploma at Smart Village, Web & UI Development Track, 2025–2026) and Bachelor of Science in Computers and Information Technology from EELU (2021–2025, GPA 3.45 / 4.0, Very Good with Honors).
+
+## Core Capabilities & Skills
+- **Frontend**: React.js, Next.js, Angular, TypeScript, JavaScript (ES6+), Tailwind CSS, Bootstrap, Responsive UI/UX.
+- **State & Data**: Redux Toolkit, Zustand, TanStack Query, NgRx, RxJS.
+- **Backend & APIs**: Node.js, Express.js, RESTful APIs, JWT Authentication, WebSockets, MongoDB, Mongoose, SQL.
+- **Agentic AI & LLMs**: LLM Integration, Prompt Engineering, Fine Tuning, RAG Systems, Vector Databases (Pinecone).
+- **Tooling**: Git, GitHub, Docker, Postman, Vite, Cloudflare Pages, Vercel, Jira, Agile/Scrum.
+
+## Essential Links
+- [Portfolio Website](https://mahmoud-mostafa.pages.dev/)
+- [GitHub Profile](https://github.com/MahmoudMosTafa717)
+- [LinkedIn Profile](https://linkedin.com/in/mahmoud-mostafa-saber)
+- [Curriculum Vitae (CV)](https://drive.google.com/file/d/1zlTxNe_UTien-WYGGOim7mCgaor4Drzk/view?usp=sharing)
+- [Contact Email](mailto:mhmodmostafa127@gmail.com)
+
+## Featured Projects
+- [Draya LMS](https://draya-lms.vercel.app/): Intelligent AI-powered learning management and exam assessment platform with automated grading and student analytics.
+- [Naqla Recruiter](https://naqla-recruiter.vercel.app/): AI-Powered Recruitment Platform automating CV parsing, candidate screening, and semantic vector matching with Pinecone.
+- [DiagnoTech](https://diagnotech-frontend.vercel.app/): AI healthcare diagnostic web application with symptom analysis and doctor matching (~20% accuracy boost via tuned ML models).
+- [FinTracker Pro](https://mohamedwael21.github.io/finance-tracker-pro): Full-stack personal finance tracker with recurring budgets, financial analytics, and transaction reporting.
+- [ShopWave](https://shop-wave-three-nu.vercel.app/): Full-stack e-commerce web platform with product management and secure checkout.
+
+## Licenses & Certifications
+- [EF SET English Certificate](https://mahmoud-mostafa.pages.dev/images/Certificates/EF%20SET%20Certificate%20Listening%20and%20Reading.webp): C2 Proficient (85/100) in Reading and Listening Mastery.
+- [SmallTalk English Speaking Level Test](https://app.smalltalk2.me/cert/f863efe3): C1+ Advanced spoken English and conversation fluency.
